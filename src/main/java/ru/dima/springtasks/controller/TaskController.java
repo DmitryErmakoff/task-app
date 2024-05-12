@@ -2,9 +2,6 @@ package ru.dima.springtasks.controller;
 
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import ru.dima.springtasks.model.Task;
 import ru.dima.springtasks.service.TaskService;

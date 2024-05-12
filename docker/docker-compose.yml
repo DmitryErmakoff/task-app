@@ -1,0 +1,24 @@
+version: '3.1'
+
+services:
+  app:
+    image: '415270858e92e73c28323d86458392106619779ff7cea1012bad2378f3de8f24'
+    container_name: app
+    expose:
+      - '8080'
+    ports:
+      - '8080:8080'
+    environment:
+      - DB_USER=bob
+      - DB_PASSWORD=apazev09
+      - DB_URL=jdbc:postgresql://db:5432/postgres
+    depends_on:
+      - db
+  db:
+    image: 'postgres'
+    container_name: db
+    expose:
+      - '5432'
+    environment:
+      - POSTGRES_USER=bob
+      - POSTGRES_PASSWORD=apazev09
